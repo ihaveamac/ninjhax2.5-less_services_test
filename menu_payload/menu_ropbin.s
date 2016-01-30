@@ -174,12 +174,7 @@ DUMMY_PTR equ (WAITLOOP_DST - 4)
 
 			wait_for_parameter_and_send MENU_LOADEDROP_BUFADR + fsUserString, MENU_FS_HANDLE
 			wait_for_parameter_and_send MENU_LOADEDROP_BUFADR + nssString, MENU_NSS_HANDLE
-			wait_for_parameter_and_send MENU_LOADEDROP_BUFADR + irrstString, MENU_IRRST_HANDLE
-			wait_for_parameter_and_send MENU_LOADEDROP_BUFADR + amsysString, MENU_AMSYS_HANDLE
-			wait_for_parameter_and_send MENU_LOADEDROP_BUFADR + ptmsysmString, MENU_PTMSYSM_HANDLE
-			wait_for_parameter_and_send MENU_LOADEDROP_BUFADR + gsplcdString, MENU_GSPLCD_HANDLE
-			wait_for_parameter_and_send MENU_LOADEDROP_BUFADR + nwmextString, MENU_NWMEXT_HANDLE
-			wait_for_parameter_and_send MENU_LOADEDROP_BUFADR + newssString, MENU_NEWSS_HANDLE
+			; some services were removed here! :D
 			wait_for_parameter_and_send MENU_LOADEDROP_BUFADR + hbMem0String, MENU_SHAREDMEMBLOCK_HANDLE
 			wait_for_parameter_and_send MENU_LOADEDROP_BUFADR + hbNdspString, MENU_SHAREDDSPBLOCK_HANDLE
 
@@ -239,27 +234,7 @@ DUMMY_PTR equ (WAITLOOP_DST - 4)
 	fsUserString:
 		.ascii "fs:USER"
 		.byte 0x00
-	irrstString:
-		.ascii "ir:rst"
-		.byte 0x00
-		.byte 0x00
-	amsysString:
-		.ascii "am:sys"
-		.byte 0x00
-		.byte 0x00
-	ptmsysmString:
-		.ascii "ptm:sysm"
-		.byte 0x00
-	gsplcdString:
-		.ascii "gsp::Lcd"
-		.byte 0x00
-	nwmextString:
-		.ascii "nwm::EXT"
-		.byte 0x00
-	newssString:
-		.ascii "news:s"
-		.byte 0x00
-		.byte 0x00
+	; some stuff was removed here! :D
 	hbMem0String:
 		.ascii "hb:mem0"
 		.byte 0x00

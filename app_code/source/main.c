@@ -368,12 +368,7 @@ void _main()
 
 	receive_handle(&fsuHandle, "fs:USER");
 	receive_handle(&nssHandle, "ns:s");
-	receive_handle(&irrstHandle, "ir:rst");
-	receive_handle(&amsysHandle, "am:sys");
-	receive_handle(&ptmsysmHandle, "ptm:sysm");
-	receive_handle(&gsplcdHandle, "gsp::Lcd");
-	receive_handle(&nwmextHandle, "nwm::EXT");
-	receive_handle(&newssHandle, "news:s");
+	// some stuff was removed here! :D
 	receive_handle(&hbmem0Handle, "hb:mem0");
 	receive_handle(&hbndspHandle, "hb:ndsp");
 
@@ -399,16 +394,11 @@ void _main()
 	// setup service list structure
 	*(nonflexible_service_list_t*)(&gspHeap[0x00100000] + 0x4 * 8) =
 		(nonflexible_service_list_t)
-		{10,
+		{4,
 			{
 				{"ns:s", nssHandle},
 				{"fs:USER", fsuHandle},
-				{"ir:rst", irrstHandle},
-				{"am:sys", amsysHandle},
-				{"ptm:sysm", ptmsysmHandle},
-				{"gsp::Lcd", gsplcdHandle},
-				{"nwm::EXT", nwmextHandle},
-				{"news:s", newssHandle},
+				// some stuff was removed here! :D
 				{"hb:mem0", hbmem0Handle},
 				{"hb:ndsp", hbndspHandle}
 			}
