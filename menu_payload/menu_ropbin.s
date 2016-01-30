@@ -108,8 +108,7 @@ DUMMY_PTR equ (WAITLOOP_DST - 4)
 				memcpy HB_DSP_ADDR, MENU_DSP_BINARY, MENU_DSP_BINARY_SIZE, 0, 0
 				create_memory_block MENU_SHAREDDSPBLOCK_HANDLE, HB_DSP_ADDR, HB_DSP_SIZE, 0x3, 0x3
 
-				srv_get_handle MENU_LOADEDROP_BUFADR + gsplcdString, 8, MENU_GSPLCD_HANDLE
-				srv_get_handle MENU_LOADEDROP_BUFADR + nwmextString, 8, MENU_NWMEXT_HANDLE
+				; some stuff was removed here! :D
 
 			; overwrite jump_sp APT_TitleLaunch's destination
 				store MENU_LOADEDROP_BUFADR + APT_TitleLaunch_end, MENU_LOADEDROP_BKP_BUFADR + APT_TitleLaunch - 0x8 ; a = skip APT_TitleLaunch, dst = sp location
